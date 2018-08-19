@@ -1,0 +1,16 @@
+﻿@model MvcVoyage.Models.Country
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Szukany kraj: @Model.Name</h2>
+
+<ul>
+    @foreach (var city in Model.Cities)
+    {
+        <li>
+            @Html.ActionLink(city.Name,"Details", new { id = city.Id})
+        </li>
+    }
+</ul>
