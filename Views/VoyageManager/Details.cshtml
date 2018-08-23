@@ -1,0 +1,46 @@
+﻿@model MvcVoyage.Models.City
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Szczegóły</h2>
+
+    <div>
+
+        <h4>KRAJ</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dd>
+                Kontynent:
+                @Html.DisplayFor(model => model.Country.Name)
+            </dd>
+
+            <dd> Typ podróży: 
+                @Html.DisplayFor(model => model.VoyageType.Name)
+            </dd>
+
+            <dd>
+                Kraj podróży:
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dd>
+                Cena podróży:
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dd>
+                Opis podróży:
+                @Html.DisplayFor(model => model.Description)
+                <p></p>
+                <p></p>
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
