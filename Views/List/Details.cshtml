@@ -1,0 +1,27 @@
+﻿@model MvcVoyage.Models.City
+@{
+    ViewBag.Title = "Details";
+}
+<h2>City: @Model.Name</h2>
+<h2>Description: @Model.Description</h2>
+<h2>Price: @Model.Price</h2>
+<h2>CountryId: @Model.CountryId</h2>
+<h2>VoyageTypeId: @Model.VoyageTypeId</h2>
+
+
+<br />
+<div class="editor-field">
+    <h2>Nazwa kraju</h2>
+    @Html.TextBoxFor(i => i.Name, new { @readonly = "readonly" })
+    @Html.ValidationMessageFor(i => i.Name)
+</div>
+
+
+<div class="editor-field">
+    <h2>Opis podróży</h2>
+    @Html.TextBoxFor(i => i.Description, new { @readonly = "readonly" })
+    @Html.ValidationMessageFor(i => i.Description)
+</div>
+
+<br />
+
